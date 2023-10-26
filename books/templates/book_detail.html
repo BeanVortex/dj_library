@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Book Detail</title>
+  </head>
+  <body>
+    <p>id: {{ book.id }}</p>
+    <p>title: {{ book.title }}</p>
+    <p>year: {{ book.year }}</p>
+    <p>publisher: {{ book.publisher }}</p>
+    <p>isbn: {{ book.isbn }}</p>
+    <p>language: {{ book.language }}</p>
+    author:
+    <a href="http://localhost:8000/books/author/{{book.author.id}}">
+      {{ book.author.first_name }}
+    </a>
+    <p>shelf: {{ book.shelf.number }}, {{book.shelf.hall}}</p>
+  </body>
+</html>

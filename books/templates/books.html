@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    {% if isAll %}
+    <title>All Books</title>
+    {% else %}
+    <title>{{author.first_name}} Books</title>
+    {% endif %}
+  </head>
+  <body>
+    {% for book in books %}
+    <p>id: {{ book.id }}</p>
+    <p>title: {{ book.title }}</p>
+    <p>year: {{ book.year }}</p>
+    <p>publisher: {{ book.publisher }}</p>
+    <p>isbn: {{ book.isbn }}</p>
+    <p>language: {{ book.language }}</p>
+    author: <a href="http://localhost:8000/books/author/{{book.author.id}}">
+      {{ book.author.first_name }}
+    </a>
+    <p>shelf: {{ book.shelf.number }}, {{book.shelf.hall}}</p>
+    <hr />
+    <br />
+    {% endfor %}
+  </body>
+</html>

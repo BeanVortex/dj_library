@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Author Detail</title>
+  </head>
+  <body>
+    <p>id: {{ author.id }}</p>
+    <p>first name: {{ author.first_name }}</p>
+    <p>last name: {{author.last_name }}</p>
+    <p>nationality: {{ author.nationality }}</p>
+    <a href="http://localhost:8000/books/author/{{author.id}}/books">
+        author's books
+    </a>
+  </body>
+</html>
