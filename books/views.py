@@ -5,7 +5,7 @@ from . import models
 
 def all(req):
     books = models.Book.objects.all()
-    return render(req, 'books.html', {'books': books, 'isAll': True})
+    return render(req, 'books.html', {'books': books})
 
 def get_book_by_id(req, id):
     book = models.Book.objects.get(pk=id)
@@ -18,4 +18,4 @@ def get_author_by_id(req, id):
 def get_authors_books_by_id(req, id):
     author = models.Author.objects.get(pk=id)
     books = models.Book.objects.filter(author=id)
-    return render(req, 'books.html', {'books': books, 'isAll': False, 'author': author})
+    return render(req, 'authors_books.html', {'books': books, 'author': author})
